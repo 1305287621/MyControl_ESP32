@@ -12,7 +12,7 @@ void MyTimer_CalBack()
     // 1ms 定时任务
     MyKey_Loop();
     MySerial_Loop();
-    // Bluetooth_Loop();
+    Bluetooth_Loop();
 }
 
 void MyTimer_Init()
