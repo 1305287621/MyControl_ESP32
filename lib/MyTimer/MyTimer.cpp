@@ -17,6 +17,6 @@ void MyTimer_CalBack()
 
 void MyTimer_Init()
 {
-    MyTicker.attach_ms(500,MyTimer_CalBack);
+    MyTicker.attach_ms(10,MyTimer_CalBack);
     Serial.println("定时器初始化完成\n");
 }
