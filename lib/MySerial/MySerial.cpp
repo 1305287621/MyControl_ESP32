@@ -44,6 +44,6 @@ void MySerial_Loop()
     receiveStruct(Mydata.SeriaReceivelData);
     //Serial.printf("stm32输入: %f  %f  %f  %f  %f  %f\n", Mydata.SeriaReceivelData.joint1_aspeed,Mydata.SeriaReceivelData.joint2_aspeed,Mydata.SeriaReceivelData.joint3_aspeed,Mydata.SeriaReceivelData.joint4_aspeed,Mydata.SeriaReceivelData.joint5_aspeed,Mydata.SeriaReceivelData.joint6_aspeed);
     memcpy(&Mydata.BlueTSendData,&Mydata.SeriaReceivelData,sizeof(Mydata.SeriaReceivelData));
-    //Serial.printf("蓝牙输出: %f  %f  %f  %f  %f  %f\n", Mydata.BlueTSendData.joint1_aspeed,Mydata.BlueTSendData.joint2_aspeed,Mydata.BlueTSendData.joint3_aspeed,Mydata.BlueTSendData.joint4_aspeed,Mydata.BlueTSendData.joint5_aspeed,Mydata.BlueTSendData.joint6_aspeed);
+    Serial.printf("蓝牙输出: %f  %f  %f  %f  %f  %f\n", Mydata.BlueTSendData.joint1_aspeed,Mydata.BlueTSendData.joint2_aspeed,Mydata.BlueTSendData.joint3_aspeed,Mydata.BlueTSendData.joint4_aspeed,Mydata.BlueTSendData.joint5_aspeed,Mydata.BlueTSendData.joint6_aspeed);
     //Serial.println("\n");
 }

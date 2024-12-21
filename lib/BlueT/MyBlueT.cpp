@@ -27,6 +27,9 @@ void BlueT_Init()
     Serial.print(SerialBT.getBtAddressString());
     Serial.print("\n");
   }
+  while (!SerialBT.hasClient());
+  Serial.print("蓝牙匹配成功\n ");
+    
 }
 
 void Bluetooth_Loop()
@@ -42,6 +45,10 @@ void Bluetooth_Loop()
     } else {
       Serial.println("数据发送失败");
     }
+    }
+    else
+    {
+      Serial.print("蓝牙连接断开 \n");
     }
 }
 
