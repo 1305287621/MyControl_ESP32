@@ -17,6 +17,7 @@ typedef struct
 	float joint4_aspeed;
 	float joint5_aspeed;
 	float joint6_aspeed;
+	float joint7_aspeed;
 }SerialReceiveData_t;
 
 typedef struct
@@ -27,6 +28,7 @@ typedef struct
 	float joint4_aspeed;
 	float joint5_aspeed;
 	float joint6_aspeed;
+	float joint7_aspeed;
 }BlueTSendData_t;
 
 
