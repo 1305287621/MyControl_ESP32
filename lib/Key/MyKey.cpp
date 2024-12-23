@@ -8,6 +8,7 @@ void MyKey_Init(void)
     pinMode(32, INPUT_PULLDOWN); //按键2设为上拉输入模式
     pinMode(35, INPUT_PULLDOWN); //按键3设为上拉输入模式
     pinMode(34, INPUT_PULLDOWN); //按键4设为上拉输入模式
+    pinMode(2, OUTPUT);//LED设为上拉输入模式
     Serial.println("按键初始化完成\n");
 }
 

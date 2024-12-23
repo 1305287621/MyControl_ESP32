@@ -11,15 +11,16 @@ void setup()
 {
   Serial.begin(115200);
   delay(10);
-  //BlueT_Init();
   MyKey_Init();
+  BlueT_Init();
   MySerial_Init();
   MyTimer_Init();
+  
 }
 
 void loop()
 {
-  delay(500); 
+  delay(10);
 }
 
 

@@ -27,28 +27,34 @@ void BlueT_Init()
     Serial.print(SerialBT.getBtAddressString());
     Serial.print("\n");
   }
-  while (!SerialBT.hasClient());
+  if (!SerialBT.hasClient());
   Serial.print("蓝牙匹配成功\n ");
     
 }
 
 void Bluetooth_Loop()
 {
-    if (SerialBT.hasClient()) {
-    Serial.print("蓝牙匹配成功 ");
+  if (SerialBT.hasClient())
+  {
+    digitalWrite(2, HIGH);
+    // Serial.print("蓝牙匹配成功 ");
     // 发送结构体数据
     size_t bytesSent = SerialBT.write((uint8_t *)&Mydata.BlueTSendData, sizeof(Mydata.BlueTSendData));
     // size_t bytesSent = SerialBT.write(12);
     // 检查数据是否已全部发送
-    if (bytesSent == sizeof(Mydata.BlueTSendData)) {
-      Serial.println("数据发送完成");
-    } else {
-      Serial.println("数据发送失败");
-    }
+    if (bytesSent == sizeof(Mydata.BlueTSendData))
+    {
+      // Serial.println("数据发送完成");
     }
     else
     {
-      Serial.print("蓝牙连接断开 \n");
+      // Serial.println("数据发送失败");
     }
+  }
+  else
+  {
+    digitalWrite(2, LOW);
+    // Serial.print("蓝牙连接断开 \n");
+  }
 }
 
