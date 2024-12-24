@@ -11,8 +11,11 @@ typedef struct
 
 typedef struct
 {
+	float joint1_angle;
 	float joint1_aspeed;
+	float joint2_angle;
 	float joint2_aspeed;
+	float joint3_angle;
 	float joint3_aspeed;
 	float joint4_aspeed;
 	float joint5_aspeed;
@@ -22,8 +25,11 @@ typedef struct
 
 typedef struct
 {
+	float joint1_angle;
 	float joint1_aspeed;
+	float joint2_angle;
 	float joint2_aspeed;
+	float joint3_angle;
 	float joint3_aspeed;
 	float joint4_aspeed;
 	float joint5_aspeed;
